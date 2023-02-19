@@ -1,5 +1,7 @@
 # maturita
+Vue app intended for selecting books for czech state exam "maturita".
 
+Books are loaded from `/data.json` file.
 ## Project setup
 ```
 npm install

@@ -1,0 +1,159 @@
+[
+  {
+    "name": "1. Literatura ve svých nejstarších základech",
+    "number": 0,
+    "id": "starovek",
+    "books": [
+      {
+        "name": "Nový zákon",
+        "id": "stary-zakon",
+        "author": "Bible"
+      },
+      {
+        "name": "Odysseia (Vaňorný, 1943)",
+        "id": "odysseia",
+        "author": "Homér"
+      },
+      {
+        "name": "Král Oidipús (Pokorný, 1963)",
+        "id": "oidipus",
+        "author": "Sofoklés"
+      },
+      {
+        "name": "Proměny (Bureš, 1974)",
+        "id": "promeny",
+        "author": "Ovidius"
+      }
+    ]
+  },
+  {
+    "name": "2. Literatura raného a vrcholného středověku",
+    "number": 1,
+    "id": "vrcholny-stredovek",
+    "books": [
+      {
+        "name": "Legenda o svaté Kateřině (Vyšehrad, 1946)",
+        "id": "legenda-o-svate-katerine",
+        "author": ""
+      },
+      {
+        "name": "Kosmova Kronika česká (K. Hrdina a M. Bláhová, 2012)",
+        "id": "kosmova-kronika-ceska",
+        "author": "Kosmas"
+      },
+      {
+        "name": "Píseň o Rolandovi (J. Pelán, 1987)",
+        "id": "pisen-o-rolandovi",
+        "author": ""
+      },
+      {
+        "name": "Vita Karoli Quarti (Odeon, 1978)",
+        "id": "vita-karoli-quarti",
+        "author": "Karel IV."
+      }
+    ]
+  },
+  {
+    "name": "3. Humanismus a renesance",
+    "number": 2,
+    "id": "humanismus-a-renesance",
+    "books": [
+      {
+        "name": "Dekameron",
+        "id": "dekameron",
+        "author": "Boccaccio, G."
+      },
+      {
+        "name": "Důmyslný rytíř Don Quijote de la Mancha (Šmíd, 1982)",
+        "id": "don-quijote-de-la-mancha",
+        "author": "Cervantes Saavedra, M. de"
+      },
+      {
+        "name": "Hamlet (Hilský, 2001)",
+        "id": "hamlet",
+        "author": "Shakespeare, W."
+      },
+      {
+        "name": "Fuente Ovejuna (Fischer, 1952)",
+        "id": "fuente-ovejuna",
+        "author": "Vega, L. de"
+      },
+      {
+        "name": "Malý testament (Loukotková, 1975)",
+        "id": "maly-testament",
+        "author": "Villon, F."
+      }
+    ]
+  },
+  {
+    "name": "4. Barokní literatura",
+    "number": 3,
+    "id": "baroko",
+    "books": [
+      {
+        "name": "Co Bůh? Člověk? (B. Durych, 1934)",
+        "id": "co-buh-clovek",
+        "author": "Bridel, B."
+      },
+      {
+        "name": "Labyrint světa a ráj srdce (Jindřich Bačkovský, 1938)",
+        "id": "labyrint-sveta-a-raj-srdce",
+        "author": "Komenský, J. A."
+      }
+    ]
+  },
+  {
+    "name": "5. Klasicismus, osvícenství, preromantismus",
+    "number": 4,
+    "id": "klasicismus-osvicenstvi-preromantismus",
+    "books": [
+      {
+        "name": "Robinson Crusoe (Vodička, 1975)",
+        "id": "robinson-crusoe",
+        "author": "Defoe, D."
+      },
+      {
+        "name": "Jeptiška (Smetanová, 1963)",
+        "id": "jeptiska",
+        "author": "Diderot, D."
+      },
+      {
+        "name": "Lakomec (Saudková, 1966)",
+        "id": "lakomec",
+        "author": "Molière"
+      },
+      {
+        "name": "Candide neboli Optimismus (Krátký, 1970)",
+        "id": "candide",
+        "author": "Voltaire"
+      },
+      {
+        "name": "Faust (Fischer, 2014)",
+        "id": "faust",
+        "author": "Goethe, J. W."
+      }
+    ]
+  },
+  {
+    "name": "6. Vznik moderního českého národa aneb tzv. národní obrození",
+    "number": 5,
+    "id": "narodni-obrozeni",
+    "books": [
+      {
+        "name": "Ohlas písní ruských (Vyšehrad, 1950)",
+        "id": "ohlasy-pisni-ruskych",
+        "author": "Čelakovský, F. L."
+      },
+      {
+        "name": "Ohlas písní českých (Státní nakl. dětské knihy, 1956)",
+        "id": "ohlasy-pisni-ceskych",
+        "author": "Čelakovský, F. L."
+      },
+      {
+        "name": "Hadrián z Římsů (Umění lidu, 1950)",
+        "id": "hadrian-z-rimsu",
+        "author": "Klicpera, V. K."
+      }
+    ]
+  }
+]
