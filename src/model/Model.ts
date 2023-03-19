@@ -5,7 +5,8 @@ export type Question = typeof QuestionType._A
 export const BookType = t.type({
     author: t.string,
     name: t.string,
-    id: t.string
+    id: t.string,
+    worksheetId: t.string
 })
 
 export type Book = typeof BookType._A

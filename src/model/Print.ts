@@ -1,5 +1,5 @@
 import {Book, className, Data, Question} from "@/model/Model";
-import {PageSizes, PDFDocument} from "pdf-lib";
+import {breakTextIntoLines, PageSizes, PDFDocument, PDFFont} from "pdf-lib";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import fontkit from '@pdf-lib/fontkit';
@@ -27,22 +27,28 @@ export async function printData(data: Data, questions: Question[], books: Map<st
             page.moveUp(page.getHeight())
             page.moveRight(offset)
             page.moveDown(offset)
+            page.moveDown(20)
             return page
         }
         let page = getNewPage()
-        page.moveDown(20)
         page.drawText("Seznam literárních děl pro ústní zkoušku z českého jazyka", {
             size: 20,
             font: boldFont,
         })
+        const maxWidth = page.getWidth() - offset;
 
         page.moveDown(15 + defaultFontSize)
-        page.drawText("Jméno a příjmení: " + data.name)
-        page.moveDown(normalLineSize)
+        const getTextHeight = (text: string, maxWidth: number, font: PDFFont, size: number): number => {
+            const lines = breakTextIntoLines(text, pdfDoc.defaultWordBreaks, maxWidth, (text) => font.widthOfTextAtSize(text, size)).length
+            return lines * page['lineHeight']
+        }
+        const text = "Jméno a příjmení: " + data.name
+        page.drawText(text, {maxWidth: maxWidth})
+        page.moveDown(getTextHeight(text, maxWidth, font, defaultFontSize))
         page.drawText("Třída: " + className(data.class))
         page.moveDown(normalLineSize)
         page.drawText("Školní rok: " + getCurrentSchoolYear())
-        page.moveDown(20)
+        page.moveDown(normalLineSize*2)
 
         questions.forEach((question) => {
             const key = data.books[question.id]
@@ -57,10 +63,11 @@ export async function printData(data: Data, questions: Question[], books: Map<st
                 alert("kniha " + key + " nebyla nalezena")
                 return
             }
-            page.moveDown(22)
-            page.drawText(question.name, {font: boldFont})
-            page.moveDown(normalLineSize)
-            page.drawText(book.name)
+            page.drawText(question.name, {font: boldFont, maxWidth: maxWidth})
+            page.moveDown(getTextHeight(question.name, maxWidth, boldFont, defaultFontSize) - 5)
+            const bookName = book.worksheetId + " " + book.name
+            page.drawText(bookName, {maxWidth: maxWidth})
+            page.moveDown(getTextHeight(bookName, maxWidth, font, defaultFontSize))
         })
 
         if (page.getY() - 40 < offset) {
